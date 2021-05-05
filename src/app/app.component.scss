@@ -1,0 +1,17 @@
+#body{
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+#layout{
+  width: 100vw;
+}
+
+
+#header{
+  display:grid;
+  justify-items: center;
+  text-align: center;
+}

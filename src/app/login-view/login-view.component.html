@@ -1,0 +1,40 @@
+<div *ngIf="!isSignedIn" id="signupForm">
+  <h3>Signup</h3>
+  <input nbInput type="text" placeholder="Email" #emailSignUp />
+  <input nbInput type="text" placeholder="Password" #passwordSignUp />
+  <button
+    nbButton
+    class="sendButton"
+    disabled
+    (click)="onSignUp(emailSignUp.value, passwordSignUp.value)"
+  >
+    Send to createUser
+  </button>
+</div>
+
+<div *ngIf="!isSignedIn" id="signInForm">
+  <h3>Or loggin</h3>
+  <input nbInput type="text" placeholder="Email" #emailSignIn />
+  <input nbInput type="text" placeholder="Password" #passwordSignIn />
+  <button
+    nbButton
+    class="sendButton"
+    disabled
+    (click)="onSignIn(emailSignIn.value, passwordSignIn.value)"
+  >
+    Send to Sig In
+  </button> <br> <br>
+
+  <div
+    id="captcha"
+    *ngIf="!isSignedIn"
+    class="g-recaptcha"
+    data-sitekey="6LciGsYaAAAAAHflwewE8flzskxp-V0Msq8p5m39"
+    data-callback="captchaPassed"
+  ></div>
+</div>
+
+<logged-in-view (isLogout)="handleLogout()" *ngIf="isSignedIn"></logged-in-view>
+
+<br />
+<br />
