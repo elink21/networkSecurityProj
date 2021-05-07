@@ -9,8 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class LoginViewComponent implements OnInit {
 
   constructor(public fireBaseService: FirebaseService) {
-
-    document.location.reload(true);
   }
 
   isSignedIn = false;

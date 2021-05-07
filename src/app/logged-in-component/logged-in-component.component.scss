@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 #userData{
   width: 300px;
   margin-left: 0;
   overflow-y: hidden;
   overflow-x: scroll;
+}
+
+
+#captchaLabel{
+  font-family: 'Dancing Script';
 }

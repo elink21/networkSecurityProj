@@ -1,8 +1,14 @@
 <p>You are now logged In!</p>
-<button nbButton status="danger" (click)="logout()">Logout</button>
+<button nbButton status="danger" (click)="logout()">Logout</button> <br />
 
-<p id="userData">
-  {{user}}
+<h6 id="captchaLabel">{{ captchaString }}</h6>
+
+<h6>Enter captcha to see ur account data</h6>
+
+<input [(ngModel)]="enteredString" (change)="checkMatch()" nbInput type="text" />
+
+<p *ngIf="dataUnlocked" id="userData">
+  {{ user }}
 </p>
 
 <!--V3 key: 6LeQhsYaAAAAANsP7W3TRhNkDX8sD28qh3pF9k3G-->
